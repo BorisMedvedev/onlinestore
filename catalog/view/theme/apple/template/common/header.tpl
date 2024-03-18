@@ -38,6 +38,26 @@
 <?php } ?>
 </head>
 <body class="<?php echo $class; ?>">
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="logo" class="logo">
+          <?php if ($logo) { ?>
+          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+          <?php } else { ?>
+          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="col-sm-5"><?php echo $search; ?>
+      </div>
+      <div class="col-sm-3"><?php echo $cart; ?></div>
+    </div>
+  </div>
+</header>
+
 <nav id="top">
   <div class="container">
     <?php echo $currency; ?>
@@ -66,24 +86,7 @@
     </div>
   </div>
 </nav>
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div id="logo">
-          <?php if ($logo) { ?>
-          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-          <?php } else { ?>
-          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-          <?php } ?>
-        </div>
-      </div>
-      <div class="col-sm-5"><?php echo $search; ?>
-      </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
-    </div>
-  </div>
-</header>
+
 <?php if ($categories) { ?>
 <div class="container">
   <nav id="menu" class="navbar">
